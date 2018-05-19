@@ -1,0 +1,50 @@
+open_with q
+search k
+search png
+
+
+rename Maili
+rename figi.pdf
+search plot
+open_with 
+search .m
+search \.m
+search bash
+open_with /pdf
+search pdf\>
+search \.pdf
+open_with 
+shell q
+search 4
+search 28
+open_with 
+search paper
+search file
+search pd
+search tk
+rename c2_c3_iter_h.eps
+search fitting
+search py
+mkdir iter=10_n=0.5_N=0.5_N=4500
+mkdir iter=7_n=0.5_N=0.5_N=4000/
+mkdir iter=7_n=0.4_N==4000
+open_with q
+rename iter=7_n=0.5_N=4000
+rename iter=10_n=0.5_N=4500
+mkdir dos-uniform_positive
+search fitt
+rename c2_c3_iter_hi.eps
+rename negative_iter=7_n=0i.5_N=5000
+rename c2_c3_iter_hi.eps
+search pdf
+search eps
+rename fig3i.eps
+search pick
+rename pick_up.dat
+rename pick_down.dat
+search 
+search delta
+open_with 
+search xx
+delete
+open_with emacs

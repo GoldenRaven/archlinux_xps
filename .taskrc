@@ -1,0 +1,38 @@
+# [Created by task 2.2.0 11/19/2015 22:54:47]
+# Taskwarrior program configuration file.
+# For more documentation, see http://taskwarrior.org or try 'man task', 'man task-faq',
+# 'man task-tutorial', 'man task-color', 'man task-sync' or 'man taskrc'
+
+# Here is an example of entries that use the default, override and blank values
+#   variable=foo   -- By specifying a value, this overrides the default
+#   variable=      -- By specifying no value, this means no default
+#   #variable=foo  -- By commenting out the line, or deleting it, this uses the default
+
+# Use the command 'task show' to see all defaults and overrides
+
+# Files
+data.location=~/.task
+
+# Color theme (uncomment one to use)
+#include /usr/share/task/light-16.theme
+#include /usr/share/task/light-256.theme
+#include /usr/share/task/dark-16.theme
+#include /usr/share/task/dark-256.theme
+#include /usr/share/task/dark-red-256.theme
+#include /usr/share/task/dark-green-256.theme
+#include /usr/share/task/dark-blue-256.theme
+#include /usr/share/task/dark-violets-256.theme
+#include /usr/share/task/dark-yellow-green.theme
+#include /usr/share/task/dark-gray-256.theme
+#include /usr/share/task/solarized-dark-256.theme
+#include /usr/share/task/solarized-light-256.theme
+report.long.labels=ID,Proj,Pri,Added,Started,scheduled,Due,Recur,Countdown,Age,Deps,Tags,Description
+report.long.columns=id,project,priority,entry,start,scheduled,due,recur,due.countdown,entry.age,depends,tags,description
+report.ls.labels=ID,Proj,scheduled,Due,Countdown,Deps,Urg,A,Description
+report.ls.columns=id,project,scheduled,due,due.countdown,depends,urgency,start.active,description
+dateformat.report=Y/m/d H:N
+report.ls.sort=due+,urgency-
+dateformat=Y/m/dTH:N
+dateformat.annotation=Y/m/dTH:N
+dateformat.edit=Y/m/dTH:N
+dateformat.info=Y/m/dTH:N

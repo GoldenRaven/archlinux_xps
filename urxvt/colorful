@@ -1,0 +1,47 @@
+##### THIS FILE IS BEING CURRENTLY MANAGED BY URXVTCONFIG #####
+##### CHANGES DONE TO THIS FILE MANUALLY MAY AFFECT THE FUNCTIONALITY ######
+##### PROCEED WITH CAUTION! #####
+
+! special colors
+URxvt.lineSpace: 0
+Xft.dpi:96
+*.foreground:  #c5c8c6
+*.background:  #1d1f21
+*.cursorColor:  #c5c8c6
+! black
+*.color0:      #282a2e
+*.color8:      #373b41
+! red
+*.color1:      #a54242
+*.color9:      #cc6666
+! green
+*.color2:      #8c9440
+*.color10:     #b5bd68
+! yellow
+*.color3:      #de935f
+*.color11:     #f0c674
+! blue
+*.color4:      #5f819d
+*.color12:     #81a2be
+! magenta
+*.color5:      #85678f
+*.color13:     #b294bb
+! cyan
+*.color6:      #5e8d87
+*.color14:     #8abeb7
+! white
+*.color7:      #707880
+*.color15:     #c5c8c6
+
+URxvt*scrollBar:         false
+URxvt*scrollBar_right:   false
+
+URxvt*transparent:       false
+
+URxvt.font:xft:文泉驿等宽正黑:size=16:style=Regular:antialias=true,xft:文泉驿等宽正黑:size=8:style=Regular:antialias=true
+URxvt.boldfont:xft:文泉驿等宽正黑:size=16:style=BOld:antialias=true,xft:文泉驿等宽正黑:size=8:style=Bold:antialias=true
+URxvt.letterSpace: -1
+
+*antialias:  false
+*autohint:   false
+

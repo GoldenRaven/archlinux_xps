@@ -1,0 +1,18 @@
+=========================
+FCITX 4.2.9.5 -- Get Signal No.: 6
+Date: try "date -d @1515415653" if you are using GNU date ***
+ProcessID: 4049
+fcitx(+0x156e)[0x55ff475cb56e]
+/usr/lib/libc.so.6(+0x348e0)[0x7fb2d07eb8e0]
+/usr/lib/libc.so.6(gsignal+0x110)[0x7fb2d07eb860]
+/usr/lib/libc.so.6(abort+0x1c9)[0x7fb2d07ecec9]
+/usr/lib/libdbus-1.so.3(_dbus_abort+0x27)[0x7fb2cfc2d4e7]
+/usr/lib/libdbus-1.so.3(+0x2f9a3)[0x7fb2cfc239a3]
+/usr/lib/libdbus-1.so.3(dbus_watch_get_enabled+0x34)[0x7fb2cfc22504]
+/usr/lib/fcitx/fcitx-dbus.so(+0x1dea)[0x7fb2cfe46dea]
+/usr/lib/fcitx/fcitx-dbus.so(+0x1fc5)[0x7fb2cfe46fc5]
+/usr/lib/libfcitx-core.so.0(+0x951c)[0x7fb2d11c251c]
+/usr/lib/libfcitx-core.so.0(FcitxInstanceRun+0x330)[0x7fb2d11c2fb0]
+fcitx(+0xe9b)[0x55ff475cae9b]
+/usr/lib/libc.so.6(__libc_start_main+0xea)[0x7fb2d07d7f4a]
+fcitx(_start+0x2a)[0x55ff475caf1a]
