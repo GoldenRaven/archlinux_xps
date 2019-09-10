@@ -1,0 +1,26 @@
+[user]
+	name = ligy
+	email = ligy-_-@outlook.com
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --stat
+	logg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	d = difftool
+	co = checkout
+	ci = commit
+	st = status
+	br = branch
+[color]
+	ui = true
+[core]
+	editor = emacs -nw
+	quotepath = false
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[merge]
+	tool = vimdiff
+[mergetool]
+	prompt = false
+[commit]
+	template = /home/ligy/.git-commit-template.txt
