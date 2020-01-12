@@ -93,10 +93,10 @@ fontFile ZapfDingbats          /usr/share/fonts/gsfonts/Z003-MediumItalic.otf
 initialSidebarState no
 nitialZoom page
 #----- bind j any down
-bind j any scrollDown(30)
-bind k any scrollUp(30)
-bind h any scrollLeft(30)
-bind l any scrollRight(30)
+bind j any scrollDown(200)
+bind k any scrollUp(200)
+bind h any scrollLeft(200)
+bind l any scrollRight(200)
 
 bind f any zoomFitPage
 bind / any find

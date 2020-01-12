@@ -47,7 +47,7 @@ URxvt*transparent:       flase
 !URxvt.font:xft:文泉驿等宽正黑:size=14:style=Regular:antialias=true,xft:文泉驿等宽正黑:size=14:style=Regular:antialias=true
 !URxvt.boldfont:xft:文泉驿等宽正黑:size=14:style=BOld:antialias=true,xft:文泉驿等宽正黑:size=14:style=Bold:antialias=true
 URxvt.font: xft:WenQuanYi Micro Hei Mono:pixelsize=20
-URxvt.letterSpace: 0
+URxvt.letterSpace: -1
 
 *antialias:  false
 *autohint:   false
