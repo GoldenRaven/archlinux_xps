@@ -145,6 +145,7 @@ export TERM="xterm-256color"
 alias et='/opt/wps-office_10.1.0.6634_x86_64/et'
 alias wps='/opt/wps-office_10.1.0.6634_x86_64/wps'
 alias wpp='/opt/wps-office_10.1.0.6634_x86_64/wpp'
+alias kg='kaggle'
 
 #alias rm to mv, trash dir: /data/trash
 # alias rm='trash' #命令别名 rm改变为trash，通过将rm命令别名值trash来实现把rm改造成删除文件至回收站
