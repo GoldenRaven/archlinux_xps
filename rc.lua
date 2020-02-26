@@ -57,7 +57,7 @@ local function run_once(cmd_arr)
     end
 end
 
-run_once({ "fcitx", "keynav", "xrdb -merge ~/.Xresources", "redshift -l 36:108"}) -- entries must be comma-separated
+run_once({ "unclutter -root", "keynav", "fcitx", "xrdb -merge ~/.Xresources", "redshift -l 36:108", "copyq"}) -- entries must be comma-separated
 -- }}}
 
 -- {{{ Variable definitions
