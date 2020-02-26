@@ -1,0 +1,29 @@
+{
+    "inbound": {
+            "port": 10808, // 监听端口
+	    "listen": "127.0.0.1",
+            "protocol": "socks", // 入口协议为 SOCKS 5
+            "domainOverride": ["tls","http"],
+            "settings": {
+            // "auth": "noauth"
+            }
+        },
+        "outbound": {
+            "protocol": "vmess", // 出口协议
+            "settings": {
+            "vnext": [
+                {
+                "address": "144.34.193.189", // 服务器地址，请修改为你自己的服务器 IP 或域名
+                "port": 61234,  // 服务器端口
+                "users": [
+                    {
+                    "id": "28634cf6-c841-4955-ab72-adbdf0503e55",  // 用户 ID，必须与服务器端配置相同
+                    "alterId": 233 // 此处的值也应当与服务器相同
+                    }
+                ]
+                }
+            ]
+            }
+        }
+}
+
