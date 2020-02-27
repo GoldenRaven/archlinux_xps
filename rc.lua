@@ -68,8 +68,8 @@ local altkey       = "Mod1"
 local terminal     = "urxvt"
 local editor       = os.getenv("EDITOR") or "vim"
 local gui_editor   = "emacs"
--- local browser      = "firefox"
-local browser      = "chromium-browser"
+local browser      = "chromium"
+local browser2      = "firefox"
 -- local guieditor    = "atom"
 local mendeley     = "mendeleydesktop"
 local file         = "nautilus"
@@ -379,12 +379,12 @@ globalkeys = awful.util.table.join(
             os.execute(string.format("amixer -q set %s toggle", beautiful.volume.togglechannel or beautiful.volume.channel))
             beautiful.volume.update()
         end),
-    --]]
     awful.key({ altkey, "Control" }, "m",
         function ()
             os.execute(string.format("amixer -q set %s 100%%", beautiful.volume.channel))
             beautiful.volume.update()
         end),
+    --]]
     awful.key({ altkey, "Control" }, "0",
         function ()
             os.execute(string.format("amixer -q set %s 0%%", beautiful.volume.channel))
@@ -401,7 +401,7 @@ globalkeys = awful.util.table.join(
     -- MPD control
     awful.key({ altkey, "Control" }, "Up",
         function ()
-            Awful.Spawn.With_Shell("Mpc Toggle")
+            awful.spawn.with_shell("mpc toggle")
             beautiful.mpd.update()
         end),
     awful.key({ altkey, "Control" }, "Down",
@@ -439,6 +439,7 @@ globalkeys = awful.util.table.join(
 
     -- User programs
     awful.key({ modkey }, "q", function () awful.spawn(browser) end),
+    awful.key({ modkey }, "o", function () awful.spawn(browser2) end),
     awful.key({ modkey,           }, "d", function () awful.spawn(mendeley) end,
               {description = "open mendeley", group = "launcher"}),
     awful.key({ modkey,           }, "i", function () awful.spawn(file) end,
