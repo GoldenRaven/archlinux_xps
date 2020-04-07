@@ -16,6 +16,7 @@
 
 (setq package-archives '(("gnu"   . "http://elpa.emacs-china.org/gnu/")
 			 ("melpa" . "http://elpa.emacs-china.org/melpa/")))
+                         ;; ("org" . "http://orgmode.org/elpa/")))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -89,10 +90,11 @@
  '(org-agenda-files
    (quote
     ("~/Documents/todo_org/todo" "~/Documents/my_diary/org-mode.org" "~/Documents/my_diary/diary.org" "~/Documents/python_scripts/python_learning_note/python_learning_note.org" "~/Documents/paper/paper.org")))
+ '(org-startup-folded nil)
  '(org-startup-with-inline-images t)
  '(package-selected-packages
    (quote
-    (smart-mode-line magit-todos beacon elpy draft-mode dracula-theme peep-dired htmlize session switch-window gnuplot-mode bongo pdf-tools gnuplot exec-path-from-shell ## org-timeline deft magit flycheck cdlatex company 2048-game helm-swoop w3m emms use-package yasnippet rainbow-mode multiple-cursors bm latex-preview-pane auctex multi-term smex helm color-theme-solarized autopair ace-jump-mode)))
+    (org ox-gfm toc-org smart-mode-line magit-todos beacon elpy draft-mode dracula-theme peep-dired htmlize session switch-window gnuplot-mode bongo pdf-tools gnuplot exec-path-from-shell ## org-timeline deft magit flycheck cdlatex company 2048-game helm-swoop w3m emms use-package yasnippet rainbow-mode multiple-cursors bm latex-preview-pane auctex multi-term smex helm color-theme-solarized autopair ace-jump-mode)))
  '(scroll-bar-mode nil)
  '(tool-bar-mode nil)
  '(tooltip-mode nil)
@@ -226,7 +228,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "WenQuanYi Micro Hei Mono" :foundry "WQYF" :slant normal :weight normal :height 143 :width normal)))))
+ '(default ((t (:family "Hack" :foundry "SRC" :slant normal :weight normal :height 158 :width normal)))))
 
 (add-to-list 'auto-mode-alist '("\\.txt\\'" . org-mode))
 (setq org-todo-keywords
@@ -278,16 +280,18 @@
 (c-set-offset 'defun-block-intro '++)
 (c-set-offset 'statement-block-intro '++)
 (setq-default indent-tabs-mode nil)
-(add-to-list 'write-file-functions 'delete-trailing-whitespace)
+
+;; 自动清除文件末尾的空白
+;; (add-to-list 'write-file-functions 'delete-trailing-whitespace)
 
 ;;hide-show code
-(add-hook 'c-mode-common-hook   'hs-minor-mode)
-(add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
-(add-hook 'java-mode-hook       'hs-minor-mode)
-(add-hook 'ess-mode-hook       'hs-minor-mode)
-(add-hook 'perl-mode-hook       'hs-minor-mode)
-(add-hook 'sh-mode-hook         'hs-minor-mode)
-(global-set-key (kbd "<f1>") 'hs-toggle-hiding)
+;; (add-hook 'c-mode-common-hook   'hs-minor-mode)
+;; (add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
+;; (add-hook 'java-mode-hook       'hs-minor-mode)
+;; (add-hook 'ess-mode-hook       'hs-minor-mode)
+;; (add-hook 'perl-mode-hook       'hs-minor-mode)
+;; (add-hook 'sh-mode-hook         'hs-minor-mode)
+;; (global-set-key (kbd "<f1>") 'hs-toggle-hiding)
 
 ;;flymake
 ;; (autoload 'flymake-find-file-hook "flymake" "" t)
@@ -348,6 +352,10 @@
  'org-babel-load-languages
  '((latex . t)))
 ;; add additional languages with '((language . t)))
+
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+    '((shell . t)))
 
 ;; all python code be safe
 (defun my-org-confirm-babel-evaluate (lang body)
@@ -448,3 +456,14 @@
         (make-hippie-expand-function '(try-complete-file-name-partially
                                        try-complete-file-name)))
 (global-set-key "\M-\\" 'my-complete-file-name)
+
+(defun show-file-name ()
+  "Show the full path file name in the minibuffer."
+  (interactive)
+  (kill-new (buffer-file-name))
+  (message (buffer-file-name)))
+
+(add-hook 'org-mode-hook 'toc-org-mode)
+
+(eval-after-load "org"
+  '(require 'ox-gfm nil t))
